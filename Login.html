@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://th-thumbnailer.cdn-si-edu.com/qL8iOmVhBPnp_P60qNZZgw-6ST0=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b4/c6/b4c65fd0-01ba-4262-9b3d-f16b53bca617/istock-172463472.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Main section styles */
+        .login {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #003366;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | HealthGuard Fintech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HealthGuard Insurance</h1>
+    </header>
+    <main>
+        <section class="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <p id="error" style="color: red; display: none;">Incorrect username or password</p>
+                <button type="button" onclick="loginUser()">Login</button>
+            </form>
+            <p>Don't have an account? <a href="Registration.html">Register here</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 HealthGuard Insurance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function loginUser() {
+            // Logic to handle login goes here
+            // You can use user authentication logic here
+            // For this example, we'll assume successful login and redirect to index.html
+            
+            // After successful login, redirect to the index page
+            window.location.href = 'index.html'; // Redirect to the index page
+        }
+    </script>
+</body>
+</html>
+
+
+

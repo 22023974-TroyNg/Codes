@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Your CSS styles here */
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | HealthGuard Insurance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Health Insurance FinTech</h1>
+    </header>
+    <main>
+        <section class="registration">
+            <h2>Register</h2>
+            <form onsubmit="return registerUser()">
+                <!-- Add registration form fields -->
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required><br><br>
+
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required><br><br>
+
+                <!-- Additional registration fields as needed -->
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 HealthGuard Insurance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function registerUser() {
+            // Logic to handle registration goes here
+            // You can save the registered user's data in some storage (e.g., local storage)
+            // For this example, we'll simply return true to simulate a successful registration
+            
+            // After successful registration, redirect to the login page
+            alert('Registration successful! You can now login.');
+            window.location.href = 'login.html'; // Redirect to the login page
+            return false; // Prevent form submission (just to be safe)
+        }
+    </script>
+</body>
+</html>
