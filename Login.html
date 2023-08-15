@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-            <!--
+                <!--
 
      I declare that this code was written by me. 
 
@@ -17,16 +17,18 @@
 
      Class: C369-2D-E63C-A
 
-     Date/Time Last modified:
+     Date/Time Last modified: 14/8/2023, 9:53pm
 
        -->
     <style>
-        body {
+        body, h1, h2, p, label, input {
             margin: 0;
             padding: 0;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background: url('https://th-thumbnailer.cdn-si-edu.com/qL8iOmVhBPnp_P60qNZZgw-6ST0=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/b4/c6/b4c65fd0-01ba-4262-9b3d-f16b53bca617/istock-172463472.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #f5f5f5;
             color: #333;
         }
 
@@ -40,7 +42,7 @@
 
         /* Main section styles */
         .login {
-            max-width: 800px;
+            max-width: 400px;
             margin: 0 auto;
             padding: 20px;
             background-color: white;
@@ -50,12 +52,38 @@
             align-items: center;
         }
 
+        /* Form styles */
+        .login form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login label, .login input {
+            margin-bottom: 10px;
+        }
+
+        /* Error message styles */
+        .login #error {
+            color: red;
+            display: none;
+            text-align: center;
+        }
+
+        /* Button styles */
+        .login button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
         /* Footer styles */
         footer {
             text-align: center;
             padding: 10px 0;
             background-color: #003366;
-            color: white;
+            color: yellow;
         }
     </style>
     <meta charset="UTF-8">
@@ -89,12 +117,23 @@
 
     <script>
         function loginUser() {
-            // Logic to handle login goes here
-            // You can use user authentication logic here
-            // For this example, we'll assume successful login and redirect to index.html
+            // Get the entered username and password
+            const enteredUsername = document.getElementById("username").value;
+            const enteredPassword = document.getElementById("password").value;
             
-            // After successful login, redirect to the index page
-            window.location.href = 'index.html'; // Redirect to the index page
+            // Retrieve the registered username and password from local storage
+            const registeredUsername = localStorage.getItem("username");
+            const registeredPassword = localStorage.getItem("password");
+            
+            // Check if the entered username and password match the registered data
+            if (enteredUsername === registeredUsername && enteredPassword === registeredPassword) {
+                // Password is correct, redirect to the index page
+                window.location.href = 'index.html';
+            } else {
+                // Password is incorrect, show error message
+                document.getElementById("error").style.display = "block";
+            }
+            return false; // Prevent form submission (just to be safe)
         }
     </script>
 </body>
