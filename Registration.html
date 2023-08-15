@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-            <!--
+                <!--
 
      I declare that this code was written by me. 
 
@@ -17,11 +17,68 @@
 
      Class: C369-2D-E63C-A
 
-     Date/Time Last modified:
+     Date/Time Last modified: 14/8/2023, 9:53pm
 
        -->
-    <style>
-        /* Your CSS styles here */
+       <style>
+        /* Common styles for all pages */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+    
+        /* Header styles */
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    
+        /* Navigation styles */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            padding: 10px 0;
+        }
+    
+        nav ul li {
+            margin: 0 20px;
+        }
+    
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+    
+        /* Main section styles */
+        .description {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #003366;
+            color: white;
+        }
+    
+        /* Additional styles for specific page content */
+        .policy-details {
+            margin-top: 20px;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,9 +112,13 @@
 
     <script>
         function registerUser() {
-            // Logic to handle registration goes here
-            // You can save the registered user's data in some storage (e.g., local storage)
-            // For this example, we'll simply return true to simulate a successful registration
+            // Get the values from the registration form
+            const newUsername = document.getElementById("newUsername").value;
+            const newPassword = document.getElementById("newPassword").value;
+            
+            // Save the registered username and password in local storage
+            localStorage.setItem("username", newUsername);
+            localStorage.setItem("password", newPassword);
             
             // After successful registration, redirect to the login page
             alert('Registration successful! You can now login.');
