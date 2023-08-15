@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-            <!--
+                <!--
 
      I declare that this code was written by me. 
 
@@ -17,7 +17,7 @@
 
      Class: C369-2D-E63C-A
 
-     Date/Time Last modified:
+     Date/Time Last modified: 14/8/2023, 9:53pm
 
        -->
 <style>
@@ -91,6 +91,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="About Us.html">About Us</a></li>
         <li><a href="Transaction Page.html">Transaction</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
     </ul>
 </nav>
 <main>
@@ -103,6 +104,16 @@
     <section class="payment">
         <h3>Enter Payment Details:</h3>
         <form action="Confirmation.html" method="post">
+            <label for="insuranceType">Select Insurance Type:</label>
+            <select id="insuranceType" name="insuranceType">
+                <option value="MSCC">Multi Stage Cancer Cover</option>
+                <option value="DiabetesCare">Diabetes Care</option>
+                <option value="PremierDisability">Premier Disability Cover</option>
+            </select><br><br>
+
+            <label for="Amount"> Amount (S$):</label>
+            <input type="number" id="Amount" name="Amount" required><br><br>
+
             <label for="creditCardNumber">Credit Card Number (16 digits):</label>
             <input type="text" id="creditCardNumber" name="creditCardNumber" pattern="[0-9]{16}" required><br><br>
 
@@ -117,9 +128,6 @@
 
             <input type="submit" value="Make Payment">
         </form>
-    </section>
-    <section class="feedback">
-        <!-- Provide feedback after successful payment -->
     </section>
 </main>
 <footer>
